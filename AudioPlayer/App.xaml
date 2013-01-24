@@ -1,0 +1,11 @@
+﻿<Application x:Class="WPFAudioPlayer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:con="clr-namespace:WPFAudioPlayer.Converter"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <con:ConvertColor x:Key="ConvertColor"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

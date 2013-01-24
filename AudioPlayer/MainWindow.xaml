@@ -1,0 +1,18 @@
+﻿<Window x:Class="WPFAudioPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        SizeToContent="WidthAndHeight"
+        Icon="/music.ico"
+        Title="MusicPlayer" Width="560" Height="160" WindowStyle="ToolWindow"
+		WindowStartupLocation="CenterScreen"
+		ResizeMode="CanMinimize">
+	<Window.Background>
+		<LinearGradientBrush EndPoint="0.913,1.169" StartPoint="0.02,0.172">
+			<GradientStop Color="#FFCCCCCC" Offset="0.931"/>
+			<GradientStop Color="#FFE2E2E2" Offset="0.012"/>
+		</LinearGradientBrush>
+	</Window.Background>
+    <Grid>
+        
+    </Grid>
+</Window>
