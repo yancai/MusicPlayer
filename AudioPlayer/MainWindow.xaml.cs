@@ -28,9 +28,13 @@ namespace WPFAudioPlayer
 
         AudioPlayerPage page = new AudioPlayerPage();
 
+        
+
         void MainWindow_Loaded(object sender, RoutedEventArgs e)
         {
             this.Content = page;
+            page.CloseWindow += this.CloaeWin;
+            page.MinWindow += this.MinWin;
         }
 
         protected override void OnClosing(System.ComponentModel.CancelEventArgs e)
@@ -42,6 +46,16 @@ namespace WPFAudioPlayer
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void CloaeWin(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void MinWin(object sender, EventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
     }
 }

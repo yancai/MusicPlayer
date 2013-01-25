@@ -247,11 +247,6 @@ namespace MediaDemo
         {
             string fileExtension = Path.GetExtension(newFile);
 
-            if (fileExtension != MP3Extension)
-            {
-                throw new Exception("目前仅支持Mp3文件！");
-            }
-
             switch (fileExtension)
             {
                 case MP3Extension:
@@ -264,6 +259,19 @@ namespace MediaDemo
                     break;
 
                 case WAVExtension:
+                    reader = new WaveFileReader(newFile);
+                    if (reader.WaveFormat.Encoding != WaveFormatEncoding.Pcm)
+                    {
+                        reader = WaveFormatConversionStream.CreatePcmStream(reader);
+                        reader = new BlockAlignReductionStream(reader);
+                    }
+                    if (reader.WaveFormat.BitsPerSample != 16)
+                    {
+                        var format = new WaveFormat(reader.WaveFormat.SampleRate,
+                           16, reader.WaveFormat.Channels);
+                        reader = new WaveFormatConversionStream(format, reader);
+                    }
+                    waveChannel = new WaveChannel32(reader);
                     break;
                 
                 case OGGVExtension:
@@ -274,8 +282,9 @@ namespace MediaDemo
                 
                 case AIFFExtension:
                     break;
-                
+
                 default:
+                    throw new Exception("暂不支持 " + fileExtension + " 格式的文件！");
                     break;
             }
         }
@@ -370,9 +379,9 @@ namespace MediaDemo
 
                     if (receiveCount > 0)
                     {
-                        provider.AddSamples(convertOutputBuffer.Bytes, 0, (int)receiveCount * sizeof(float)*reader.WaveFormat.Channels);
+                        provider.AddSamples(convertOutputBuffer.Bytes, 0, (int)receiveCount * sizeof(float) * waveChannel.WaveFormat.Channels);
 
-                        while (provider.BuffersCount > 3)
+                        while (provider.BuffersCount > BusyQueuedBuffersThreshold)
                         {
                             Thread.Sleep(10);
                         }
@@ -382,12 +391,19 @@ namespace MediaDemo
             }
 
             #region 音频自然播放结束
-            
-            //Pause();
+
+            while (provider.BuffersCount > 0)
+            {
+                Thread.Sleep(10);
+            }
+
             Stop();
             CurrentPlayTime = new TimeSpan(0);
-            soundTouch.Clear(); 
-            
+            soundTouch.Clear();
+
+            // Play Ended event
+            //PlayEnded(this, new EventArgs());            
+
             #endregion
         } 
 
@@ -484,9 +500,18 @@ namespace MediaDemo
             reader.Dispose();
             waveChannel.Dispose();
             player.Dispose();
+            _state = AudioState.Uninitialized;
         }
 
         #endregion
 
+
+        #region Event
+
+        public delegate void PlayEndedHandler(object sender, EventArgs e);
+
+        public event PlayEndedHandler PlayEnded;
+
+        #endregion
     }
 }

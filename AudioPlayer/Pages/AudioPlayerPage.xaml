@@ -34,5 +34,7 @@
         <TextBlock HorizontalAlignment="Right" Margin="0,0,8,8" TextWrapping="Wrap" Text="音量" VerticalAlignment="Bottom" RenderTransformOrigin="-0.333,0.442"/>
         <Button x:Name="Button_Stop" Content="停止" Margin="142,8,0,0" VerticalAlignment="Top" Height="20" Click="Button_Stop_Click" HorizontalAlignment="Left" Width="35" />
         <TextBlock Height="Auto"  x:Name="TextBlock_FileName" HorizontalAlignment="Center" VerticalAlignment="Top" Width="Auto" FontSize="20" FontStretch="Normal" d:LayoutOverrides="VerticalAlignment" FontFamily="Times New Roman" FontStyle="Italic" Margin="0,30,0,0" />
+        <Button Content="X" Height="15" HorizontalAlignment="Left" Margin="485,7.337,0,0" Name="Button_Close" VerticalAlignment="Top" Width="15" Click="Button_Close_Click" FontSize="8" />
+        <Button Content="-" Height="15" HorizontalAlignment="Left" Margin="466,7.337,0,0" Name="Button_Min" VerticalAlignment="Top" Width="15" Click="Button_Min_Click"  FontSize="10.667" />
     </Grid>
 </Page>

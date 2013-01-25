@@ -221,5 +221,22 @@ namespace WPFAudioPlayer.Pages
             }
         }
 
+        private void Button_Close_Click(object sender, RoutedEventArgs e)
+        {
+            CloseWindow(sender, e);
+        }
+
+        public delegate void CloseWindowHandler(object sender, EventArgs e);
+
+        public event CloseWindowHandler CloseWindow;
+
+        private void Button_Min_Click(object sender, RoutedEventArgs e)
+        {
+            MinWindow(sender, e);
+        }
+
+        public delegate void MinWindowHandler(object sender, EventArgs e);
+
+        public event MinWindowHandler MinWindow;
     }
 }

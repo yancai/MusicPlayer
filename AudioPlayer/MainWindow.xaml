@@ -9,9 +9,9 @@
         MouseLeftButtonDown="Window_MouseLeftButtonDown"
 		ResizeMode="CanMinimize">
 	<Window.Background>
-		<LinearGradientBrush EndPoint="0.913,1.169" StartPoint="0.02,0.172">
-			<GradientStop Color="#88CCCCCC" Offset="0.931"/>
-			<GradientStop Color="#88E2E2E2" Offset="0.012"/>
+		<LinearGradientBrush EndPoint="0.533,1.822" StartPoint="0.013,0.035">
+			<GradientStop Color="#B1292929" Offset="0.931"/>
+			<GradientStop Color="#40FFFFFF" Offset="0.025"/>
 		</LinearGradientBrush>
 	</Window.Background>
     <Grid>
