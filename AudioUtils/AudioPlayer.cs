@@ -6,6 +6,9 @@ using NAudio.Wave;
 
 namespace MediaDemo
 {
+    /// <summary>
+    /// Audio States
+    /// </summary>
     public enum AudioState
     {
         Uninitialized   = 0,
