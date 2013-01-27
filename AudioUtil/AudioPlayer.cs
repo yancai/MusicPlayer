@@ -1,10 +1,10 @@
 ﻿using System;
 using System.IO;
 using System.Threading;
-using MediaDemo.SoundTouch;
+using AudioUtil.SoundTouch;
 using NAudio.Wave;
 
-namespace MediaDemo
+namespace AudioUtil
 {
     /// <summary>
     /// Audio States

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioPlayer", "AudioPlayer\AudioPlayer.csproj", "{6EC24A69-0C16-490F-AFAB-61DB7C95CA2B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioUtil", "AudioUtils\AudioUtil.csproj", "{BC03AE06-1FE4-4C46-A1CF-B629F96ED07D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AudioUtil", "AudioUtil\AudioUtil.csproj", "{BC03AE06-1FE4-4C46-A1CF-B629F96ED07D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

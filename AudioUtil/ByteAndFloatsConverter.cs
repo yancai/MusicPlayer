@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.InteropServices;
 
-namespace MediaDemo
+namespace AudioUtil
 {
     #region ByteAndFloatsConverter - Conversion Utility Structure (Byte[] <-> Float[])
 

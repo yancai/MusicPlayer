@@ -1,4 +1,4 @@
-﻿namespace MediaDemo
+﻿namespace AudioUtil
 {
     public class TimeStretchProfile
     {

@@ -8,8 +8,8 @@
     <ProjectGuid>{BC03AE06-1FE4-4C46-A1CF-B629F96ED07D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MediaDemo</RootNamespace>
-    <AssemblyName>MediaDemo</AssemblyName>
+    <RootNamespace>AudioUtil</RootNamespace>
+    <AssemblyName>AudioUtil</AssemblyName>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

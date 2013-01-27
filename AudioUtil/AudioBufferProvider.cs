@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using NAudio.Wave;
 
-namespace MediaDemo
+namespace AudioUtil
 {
     class AudioBufferProvider : IWaveProvider
     {

@@ -2,7 +2,7 @@
 using System.Runtime.InteropServices;
 using System.Text;
 
-namespace MediaDemo.SoundTouch
+namespace AudioUtil.SoundTouch
 {
     public class SoundTouchAPI : IDisposable
     {
