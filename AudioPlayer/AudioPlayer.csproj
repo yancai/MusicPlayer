@@ -58,6 +58,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Resources\ButtonMinControl.xaml.cs">
+      <DependentUpon>ButtonMinControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ButtonOpenControl.xaml.cs">
+      <DependentUpon>ButtonOpenControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ButtonPauseControl.xaml.cs">
+      <DependentUpon>ButtonPauseControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ButtonPlayControl.xaml.cs">
+      <DependentUpon>ButtonPlayControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\ButtonStopControl.xaml.cs">
+      <DependentUpon>ButtonStopControl.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -74,6 +89,26 @@
     <Page Include="Pages\AudioPlayerPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Resources\ButtonMinControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ButtonOpenControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ButtonPauseControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ButtonPlayControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Resources\ButtonStopControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -88,7 +88,8 @@ namespace WPFAudioPlayer.Pages
                 {
                     player.Pause();
                 }
-                Button_PlayPause.Content = "播放";
+                //Button_PlayPause.Content = "播放";
+                Button_PlayPause.ToolTip = "点击播放";
             }
 
             OpenFileDialog openFileDialog = new OpenFileDialog();
@@ -138,12 +139,14 @@ namespace WPFAudioPlayer.Pages
                                                      player.Tempo = Tempo;
                                                  }));
                 Slider_Position.IsEnabled = true;
-                Button_PlayPause.Content = "暂停";
+                //Button_PlayPause.Content = "暂停";
+                Button_PlayPause.ToolTip = "点击暂停";
             }
             else if (player.State == AudioState.Playing)
             {
                 player.Pause();
-                Button_PlayPause.Content = "播放";
+                //Button_PlayPause.Content = "播放";
+                Button_PlayPause.ToolTip = "点击播放";
             }
         }
 
@@ -160,7 +163,8 @@ namespace WPFAudioPlayer.Pages
             player.Stop();
             Slider_Position.Value = 0;
             timer.Stop();
-            Button_PlayPause.Content = "播放";
+            //Button_PlayPause.Content = "播放";
+            Button_PlayPause.ToolTip = "点击播放";
         } 
 
         #endregion
@@ -190,7 +194,8 @@ namespace WPFAudioPlayer.Pages
                 Slider_Position.Value = player.CurrentPlayTime.TotalSeconds;
                 if (curTime == TimeSpan.FromSeconds(0) && player.State == AudioState.Stopped)
                 {
-                    Button_PlayPause.Content = "播放";
+                    //Button_PlayPause.Content = "播放";
+                    Button_PlayPause.ToolTip = "点击播放";
                     timer.Stop();
                 }
             }

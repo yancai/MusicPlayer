@@ -7,6 +7,209 @@
     <Application.Resources>
         <ResourceDictionary>
             <con:ConvertColor x:Key="ConvertColor"/>
+            
+            
+            <Style x:Key="ButtonStopStyle" TargetType="{x:Type Button}">
+            	<Setter Property="Template">
+            		<Setter.Value>
+            			<ControlTemplate TargetType="{x:Type Button}">
+            				<Grid x:Name="LayoutRoot">
+            					<Ellipse Stroke="Red" StrokeThickness="5" Fill="#05FF0000">
+            						<Ellipse.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Ellipse.Effect>
+            					</Ellipse>
+            					<Rectangle Margin="8" Stroke="Red">
+            						<Rectangle.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Rectangle.Effect>
+            					</Rectangle>
+            					<Ellipse Stroke="White"/>
+            					<Rectangle Margin="8" Stroke="White"/>
+            					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            				</Grid>
+            				<ControlTemplate.Triggers>
+            					<Trigger Property="IsFocused" Value="True"/>
+            					<Trigger Property="IsDefaulted" Value="True"/>
+            					<Trigger Property="IsMouseOver" Value="True"/>
+            					<Trigger Property="IsPressed" Value="True"/>
+            					<Trigger Property="IsEnabled" Value="False"/>
+            				</ControlTemplate.Triggers>
+            			</ControlTemplate>
+            		</Setter.Value>
+            	</Setter>
+            </Style>
+            
+            <Style x:Key="ButtonPauseStyle" TargetType="{x:Type Button}">
+            	<Setter Property="Template">
+            		<Setter.Value>
+            			<ControlTemplate TargetType="{x:Type Button}">
+            				<Grid x:Name="LayoutRoot">
+            					<Ellipse Stroke="#FF00CAC5" StrokeThickness="5" Fill="#0500CAC5">
+            						<Ellipse.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Ellipse.Effect>
+            					</Ellipse>
+            					<Rectangle HorizontalAlignment="Left" Margin="9.75,8,0,8" Stroke="#FF00CAC5" Width="5" RenderTransformOrigin="1.225,0.5">
+            						<Rectangle.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Rectangle.Effect>
+            					</Rectangle>
+            					<Rectangle HorizontalAlignment="Right" Margin="0,8,9.75,8" Stroke="#FF00CAC5" Width="5" RenderTransformOrigin="-0.275,0.5">
+            						<Rectangle.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Rectangle.Effect>
+            					</Rectangle>
+            					<Ellipse Stroke="White"/>
+            					<Rectangle HorizontalAlignment="Left" Margin="9.75,8,0,8" Stroke="White" Width="5" RenderTransformOrigin="1.225,0.5"/>
+            					<Rectangle HorizontalAlignment="Right" Margin="0,8,9.75,8" Stroke="White" Width="5" RenderTransformOrigin="-0.275,0.5"/>
+            					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            				</Grid>
+            				<ControlTemplate.Triggers>
+            					<Trigger Property="IsFocused" Value="True"/>
+            					<Trigger Property="IsDefaulted" Value="True"/>
+            					<Trigger Property="IsMouseOver" Value="True"/>
+            					<Trigger Property="IsPressed" Value="True"/>
+            					<Trigger Property="IsEnabled" Value="False"/>
+            				</ControlTemplate.Triggers>
+            			</ControlTemplate>
+            		</Setter.Value>
+            	</Setter>
+            </Style>
+            <Style x:Key="ButtonOpenStyle" TargetType="{x:Type Button}">
+            	<Setter Property="Template">
+            		<Setter.Value>
+            			<ControlTemplate TargetType="{x:Type Button}">
+            				<Grid x:Name="LayoutRoot">
+            					<Ellipse x:Name="ellipse1" Stroke="#FF00FF4A" Fill="#0500FF4A" StrokeThickness="5">
+            						<Ellipse.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Ellipse.Effect>
+            					</Ellipse>
+            					<Path x:Name="path" Data="M320,208 L279.5,255.5 359.5,255.5 z" Margin="5.783,7.875,5.783,11.689" Stretch="Fill" Stroke="#FF00FF4A">
+            						<Path.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Path.Effect>
+            					</Path>
+            					<Ellipse x:Name="ellipse" Stroke="White"/>
+            					<Path Data="M320,208 L279.5,255.5 359.5,255.5 z" Margin="5.783,7.875,5.783,11.689" Stretch="Fill" Stroke="White" RenderTransformOrigin="0.5,0.66"/>
+            					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            				</Grid>
+            				<ControlTemplate.Triggers>
+            					<Trigger Property="IsFocused" Value="True"/>
+            					<Trigger Property="IsDefaulted" Value="True"/>
+            					<Trigger Property="IsMouseOver" Value="True"/>
+            					<Trigger Property="IsPressed" Value="True"/>
+            					<Trigger Property="IsEnabled" Value="False"/>
+            				</ControlTemplate.Triggers>
+            			</ControlTemplate>
+            		</Setter.Value>
+            	</Setter>
+            </Style>
+            <Style x:Key="ButtonCloseStyle" TargetType="{x:Type Button}">
+            	<Setter Property="Template">
+            		<Setter.Value>
+            			<ControlTemplate TargetType="{x:Type Button}">
+            				<Grid x:Name="LayoutRoot">
+            					<Rectangle Stroke="#FF0010FF" Fill="#050010FF" StrokeThickness="5">
+            						<Rectangle.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Rectangle.Effect>
+            					</Rectangle>
+            					<Path Data="M280.43749,80.312493 L302.9375,102.9375" Margin="0.356,0.312,0.144,0.062" Stretch="Fill" Stroke="#FF0010FF">
+            						<Path.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Path.Effect>
+            					</Path>
+            					<Path Data="M280.31238,102.68699 L302.68783,80.186461" Margin="0.231,0.188,0.394,0.313" Stretch="Fill" Stroke="#FF0010FF">
+            						<Path.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Path.Effect>
+            					</Path>
+            					<Rectangle Stroke="White"/>
+            					<Path Data="M280.43749,80.312493 L302.9375,102.9375" Margin="0.356,0.312,0.144,0.062" Stretch="Fill" Stroke="White"/>
+            					<Path Data="M280.31238,102.68699 L302.68783,80.186461" Margin="0.231,0.188,0.394,0.313" Stretch="Fill" Stroke="White"/>
+            					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            				</Grid>
+            				<ControlTemplate.Triggers>
+            					<Trigger Property="IsFocused" Value="True"/>
+            					<Trigger Property="IsDefaulted" Value="True"/>
+            					<Trigger Property="IsMouseOver" Value="True"/>
+            					<Trigger Property="IsPressed" Value="True"/>
+            					<Trigger Property="IsEnabled" Value="False"/>
+            				</ControlTemplate.Triggers>
+            			</ControlTemplate>
+            		</Setter.Value>
+            	</Setter>
+            </Style>
+            <Style x:Key="ButtonMinStyle" TargetType="{x:Type Button}">
+            	<Setter Property="Template">
+            		<Setter.Value>
+            			<ControlTemplate TargetType="{x:Type Button}">
+            				<Grid x:Name="LayoutRoot">
+            					<Rectangle Stroke="#FFD2ED5E" StrokeThickness="5" Fill="#05D2ED5E">
+            						<Rectangle.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Rectangle.Effect>
+            					</Rectangle>
+            					<Path Data="M40.25,87.499665 L62.583333,87.499664" Margin="0.334,11.5,0.333,11.5" Stretch="Fill" Stroke="#FFD2ED5E">
+            						<Path.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Path.Effect>
+            					</Path>
+            					<Rectangle Stroke="White"/>
+            					<Path Data="M40.25,87.499665 L62.583333,87.499664" Margin="0.334,11.5,0.333,11.5" Stretch="Fill" Stroke="White"/>
+            					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            				</Grid>
+            				<ControlTemplate.Triggers>
+            					<Trigger Property="IsFocused" Value="True"/>
+            					<Trigger Property="IsDefaulted" Value="True"/>
+            					<Trigger Property="IsMouseOver" Value="True"/>
+            					<Trigger Property="IsPressed" Value="True"/>
+            					<Trigger Property="IsEnabled" Value="False"/>
+            				</ControlTemplate.Triggers>
+            			</ControlTemplate>
+            		</Setter.Value>
+            	</Setter>
+            </Style>
+            <Style x:Key="ButtonPlayStyle" TargetType="{x:Type Button}">
+            	<Setter Property="Template">
+            		<Setter.Value>
+            			<ControlTemplate TargetType="{x:Type Button}">
+            				<Grid x:Name="LayoutRoot">
+            					<Ellipse Stroke="#FF00CAC5" StrokeThickness="5" Fill="#0500CAC5" Margin="0,-0.125,0,0.125">
+            						<Ellipse.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Ellipse.Effect>
+            					</Ellipse>
+            					<Ellipse Stroke="White" Margin="0,-0.125,0,0.125"/>
+            					<Path Data="M0.5,0.5 L0.5,16.5 L8.5,8.5 z" Margin="15.375,7.375,5.958,7.625" Stroke="#FF00CAC5" Stretch="Fill" RenderTransformOrigin="0.414,0.49">
+            						<Path.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Path.Effect>
+            					</Path>
+            					<Path Data="M0.5,0.5 L0.5,16.5 L8.5,8.5 z" Margin="15.375,7.375,5.958,7.625" Stroke="White" Stretch="Fill" RenderTransformOrigin="0.414,0.49"/>
+            					<Path Data="M-26.375195,40.35266 L-26.375194,56.35266" HorizontalAlignment="Left" Height="18" Margin="11.625,0,0,7.125" Stretch="Fill" Stroke="#FF00CAC5" VerticalAlignment="Bottom" Width="1">
+            						<Path.Effect>
+            							<BlurEffect Radius="30"/>
+            						</Path.Effect>
+            					</Path>
+            					<Path Data="M-26.375195,40.35266 L-26.375194,56.35266" HorizontalAlignment="Left" Height="18" Margin="11.625,0,0,7.125" Stretch="Fill" Stroke="White" VerticalAlignment="Bottom" Width="1"/>
+            					<ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            				</Grid>
+            				<ControlTemplate.Triggers>
+            					<Trigger Property="IsFocused" Value="True"/>
+            					<Trigger Property="IsDefaulted" Value="True"/>
+            					<Trigger Property="IsMouseOver" Value="True"/>
+            					<Trigger Property="IsPressed" Value="True"/>
+            					<Trigger Property="IsEnabled" Value="False"/>
+            				</ControlTemplate.Triggers>
+            			</ControlTemplate>
+            		</Setter.Value>
+            	</Setter>
+            </Style>
+            
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>
