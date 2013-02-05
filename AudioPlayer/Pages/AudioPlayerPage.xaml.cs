@@ -84,7 +84,10 @@ namespace WPFAudioPlayer.Pages
             if (player != null && player.State != AudioState.Stopped)
             {
                 //player.Dispose();
-                player.Pause();
+                if (player.State != AudioState.Pausing)
+                {
+                    player.Pause();
+                }
                 Button_PlayPause.Content = "播放";
             }
 
